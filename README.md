@@ -41,13 +41,13 @@ To use it, you need to install first:
 ### VM creation
 
 With all prerequisites installed, just 
-0. Clone this repo
-0. Create new folder in `vm` dir with short, memorable name like `niceproject`.
-0. Copy `Vagrantfile` to `vm/niceproject`.
-0. Edit `vm/niceproject/Vagrantfile` to your liking. 
-   Probably you just want to uncomment some lines that are installing tools.
-   There are `!!! CHANGE ME !!!` blocks in places that you should edit
-0. Change your current dir to `vm/niceproject` and execute
+1. Clone this repo 
+1. Create new folder in `vm` dir with short, memorable name like `niceproject`. 
+1. Copy `Vagrantfile` to `vm/niceproject`. 
+1. Edit `vm/niceproject/Vagrantfile` to your liking. 
+   Probably you just want to uncomment some lines that are installing tools. 
+   There are `!!! CHANGE ME !!!` blocks in places that you should edit 
+1. Change your current dir to `vm/niceproject` and execute 
 ```
 sudo vagrant up --provider=hyperv
 ```
@@ -74,7 +74,7 @@ Login screen can blink when password is accepted, just wait about a minute and y
 
 ## Origin
 
-After few years of Ubuntu usage as a main driver, author of this project moved to Windows due to a bunch of time wasted on dual booting due to games and few apps like Adobe suite.
-Unfortunately Windows didn't offer everything I wanted, so I decided to make an easy-to-use VM factory to store complete dev environments for few separate projects that I work on.
+After few years of Ubuntu usage as a main driver, author of this project moved to Windows due to a bunch of time wasted on dual booting due to games and few apps like Adobe suite. Unfortunately Windows didn't offer everything I wanted, so I decided to make an easy-to-use VM factory to store complete dev environments for few separate projects that I work on.
+
 With this approach I have support for all apps I need without dualbooting, and a power and flexibility of FOSS apps on Ubuntu. You just suspend or turn off VMs if you need some free time in games :)
-The only drawback are infamous Windows updates that can crash your OS, but fortunately I didn't encounter them myself.
+The only drawback are infamous Windows updates that can crash your OS, but fortunately I didn't encounter them myself. 
