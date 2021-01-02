@@ -61,14 +61,28 @@ sudo vagrant destroy -f
 
 ### VM usage
 
+#### SSH
+
 ```
-# for SSH session
 sudo vagrant ssh
 ```
 
+#### Desktop
+
+Install [NoMachine](https://www.nomachine.com/) and connect with it.  
+Default display settings should be ok, just remember to check "resize display to your window" or something like that.  
+Additional graphic options worth noting:
+
+>Hi,
+>
+>NoMachine automatically adapts to network conditions, so I wouldn’t change many of the default options. In particular I’d leave H.264 as it could leverage hardware encoding and decoding.  In the Display settings panel I’d change display quality to max, choose to request 60 frame per second and select ‘Disable frame buffering on decoding’ along with ‘Disable client side image post-processing’. You may also want to disable UDP by clicking to Edit the connection and selecting Advanced settings.
+>
+>fra81
+* https://forums.nomachine.com/topic/recommended-settings-for-fast-local-lan-connections-only
+
 ### Notes
 
-Login screen can blink when password is accepted, just wait about a minute and you will be logged in
+Login screen on desktop can blink when password is accepted, just wait about a 30 seconds and you will be logged in eventually.
 
 ### Maintenance
 
