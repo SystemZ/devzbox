@@ -1,8 +1,6 @@
 # DevzBox
 
-**WIP, need few bugs fixed!**
-
-Batteries included, automated deployment of user-friendly, disposable developer environments based on Ubuntu
+Batteries included, automated deployment of disposable dev envs based on Ubuntu 20.04
 
 ## About
 
@@ -13,17 +11,17 @@ This is mainly for local usage with 16GB RAM+ but you can use it on remote dedic
 
 Without any customization it will spawn VM with:
 - Ubuntu 20.04 LTS Desktop upgraded to latest version
-- installed packages: `make gcc g++ gettext-base wget curl`
+- additional apt packages: `make gcc g++ gettext-base pwgen wget curl`
 - Golang from snap (automatically updated)
 - Node.js 14.x LTS from apt repo (upgradable with apt-get)
-- Docker from apt repo (upgradable with apt-get)
+- Docker from official apt repo (upgradable with apt-get)
 - k8s cluster with 
   - `kind` from `go get`
   - `kubectl` and `helm` from snap (automatically updated)
 - NoMachine remote desktop server exposed only via local network
 - JetBrains Toolbox with selected dark skin and no analytics selected, for easily installation and one-click upgrades of IntelliJ IDEA etc.
 
-You can easily add your scripts to install what you need
+You can easily add your custom scripts to install in `provision/custom`
 
 ## Setup
 
@@ -61,7 +59,7 @@ With all prerequisites installed, just
 1. Edit `vm/niceproject/Vagrantfile` to your liking. 
    Probably you just want to uncomment some lines that are installing tools. 
    There are `!!! CHANGE ME !!!` blocks in places that you should edit 
-1. Change your current dir to `vm/niceproject` and execute 
+1. Start and provision VM
    ```bash
    # use Hyper-V on Windows
    # after launching you will be asked about Hyper-V Virtual Switch, just enter number with proper ID
