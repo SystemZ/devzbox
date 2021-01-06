@@ -8,6 +8,7 @@ tar xvf tb.tar.gz
 rm tb.tar.gz
 # shellcheck disable=SC2164
 cd jetbrains-toolbox-*
+# https://askubuntu.com/a/294748/453981
 sudo -H -u vagrant bash -c './jetbrains-toolbox'
 cd ../
 rm -r jetbrains-toolbox-*
