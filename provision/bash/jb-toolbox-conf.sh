@@ -1,5 +1,5 @@
-JB_CONF="Preconfiguring Jetbrains Toolbox: dark theme + no metrics ..."
-cat << EOF
+echo "Preconfiguring Jetbrains Toolbox: dark theme + no metrics ..."
+JB_CONF=$(cat <<EOF
 {
     "statistics": {
         "allow": false
@@ -9,5 +9,7 @@ cat << EOF
     }
 }
 EOF
-mkdir -p ~/.local/share/JetBrains/Toolbox
-echo "$JB_CONF" > ~/.local/share/JetBrains/Toolbox/.settings.json
+)
+mkdir -p /home/vagrant/.local/share/JetBrains/Toolbox
+echo "$JB_CONF" > /home/vagrant/.local/share/JetBrains/Toolbox/.settings.json
+chown -R vagrant:vagrant /home/vagrant/.local/

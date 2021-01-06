@@ -1,7 +1,13 @@
 echo "Installing Jetbrains Toolbox..."
+
+# shellcheck disable=SC2164
+cd /home/vagrant
 # https://unix.stackexchange.com/a/391801/448729
-wget "https://data.services.jetbrains.com/products/download?code=tb&platform=linux" -O tb.tar.gz
+wget -q "https://data.services.jetbrains.com/products/download?code=tb&platform=linux" -O tb.tar.gz
 tar xvf tb.tar.gz
 rm tb.tar.gz
+# shellcheck disable=SC2164
 cd jetbrains-toolbox-*
-./jetbrains-toolbox
+sudo -H -u vagrant bash -c './jetbrains-toolbox'
+cd ../
+rm -r jetbrains-toolbox-*
