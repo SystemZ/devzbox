@@ -9,6 +9,8 @@ Vagrant.configure("2") do |config|
 ### !!! CHANGE ME START !!!
   # Hostname inside of VM
   config.vm.hostname = "devzbox"
+
+  # Hyper-V available on Windows Pro or higher
   config.vm.provider "hyperv" do |h|
     h.vmname = "devzbox"
     # CPU threads assigned to VM
@@ -19,6 +21,9 @@ Vagrant.configure("2") do |config|
 	# Maximal assigned memory to VM in MB
     h.maxmemory = 4096
 ### !!! CHANGE ME END !!!
+
+    # you should just update your OS regularly via `apt-get` or desktop app, we don't need this nagging here
+    config.vm.box_check_update = false
 
     # Allows pretty fast remote desktop in Hyper-V Manager but not as fast as NX so we don't need it
     # Use it as fallback
@@ -38,6 +43,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "../../provision/bash/date-save.sh"
   config.vm.provision "shell", path: "../../provision/bash/debian-upgrade-safe.sh"
   config.vm.provision "shell", path: "../../provision/bash/debian-tools-common.sh"
+  #config.vm.provision "shell", path: "../../provision/bash/ansible-apt.sh" # doesn't work yet
+  #config.vm.provision "shell", path: "../../provision/bash/ansible-pip.sh"
   config.vm.provision "shell", path: "../../provision/bash/debian-node-js-14.sh"
   config.vm.provision "shell", path: "../../provision/bash/docker.sh"
   config.vm.provision "shell", path: "../../provision/bash/snap-go.sh"
@@ -46,5 +53,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "../../provision/bash/nomachine-7.sh"
   config.vm.provision "shell", path: "../../provision/bash/jb-toolbox-conf.sh"
   config.vm.provision "shell", path: "../../provision/bash/jb-toolbox.sh"
+  config.vm.provision "shell", path: "../../provision/bash/passwd-random.sh"
+  config.vm.provision "shell", path: "../../provision/bash/ready.sh"
 ### !!! CHANGE ME END !!!
 end
