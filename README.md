@@ -14,7 +14,7 @@ Without any customization it will spawn VM with:
 - additional apt packages: `make gcc g++ gettext-base pwgen wget curl`
 - Golang from snap (automatically updated)
 - Node.js 14.x LTS from apt repo (upgradable with apt-get)
-- Docker from official apt repo (upgradable with apt-get)
+- Docker from official apt repo (upgradable with apt-get) and docker-compose as a container
 - k8s cluster with 
   - `kind` from `go get`
   - `kubectl` and `helm` from snap (automatically updated)

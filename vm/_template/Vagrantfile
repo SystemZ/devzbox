@@ -47,6 +47,7 @@ Vagrant.configure("2") do |config|
   #config.vm.provision "shell", path: "../../provision/bash/ansible-pip.sh"
   config.vm.provision "shell", path: "../../provision/bash/debian-node-js-14.sh"
   config.vm.provision "shell", path: "../../provision/bash/docker.sh"
+  config.vm.provision "shell", path: "../../provision/bash/docker-compose-container.sh"
   config.vm.provision "shell", path: "../../provision/bash/snap-go.sh"
   config.vm.provision "shell", path: "../../provision/bash/k8s-kind.sh"
   config.vm.provision "shell", path: "../../provision/bash/ubuntu-desktop-minimal.sh"
