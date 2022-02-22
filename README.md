@@ -76,6 +76,7 @@ With all prerequisites installed, just
    Your VM should be visible after launching, just double click it to connect.
    Select "Change the remote display resolution to match the window" when prompted on first connect about "Display resolution".
    Change resolution will allow to resize your remote desktop freely as you please just by resizing remote desktop window
+1. Make sure that Windows isn't blurring your remote desktop by enforcing 100% scaling on NX player
 1. If you need even more low latency, there are additional graphic options worth noting:
    >Hi,
    >
